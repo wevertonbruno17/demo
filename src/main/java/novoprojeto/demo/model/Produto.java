@@ -15,6 +15,47 @@ public class Produto implements Serializable {
 
     public String nome;
     public String preço;
+    public String validade;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNomeDoProduto() {
+        return getNomeDoProduto();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPreço() {
+        return preço;
+    }
+
+    public void setPreço(String preço) {
+        this.preço = preço;
+    }
+
+    public String getValidade() {
+        return validade;
+    }
+
+    public void setValidade(String validade) {
+        this.validade = validade;
+    }
+
+    private Long NomeDoProduto() {
+        return id;
+    }
 
 
 }
