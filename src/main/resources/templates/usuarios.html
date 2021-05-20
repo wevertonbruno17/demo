@@ -27,8 +27,9 @@
             <tr th:each="usuario: ${usuarios}">
                 <th scope="row" th:text="${usuario.id}"></th>
                 <td th:text="${usuario.nome}"></td>
+
                 <td th:text="${usuario.estadoCivil}"></td>
-                <td th:text="${usuario.dataDeNascimento}"></td>
+                <td th:text="${usuario.dataDenascimento}"></td>
             </tr>
             </tbody>
         </table>

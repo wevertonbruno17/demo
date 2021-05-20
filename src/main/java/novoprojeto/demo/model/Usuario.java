@@ -13,11 +13,11 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nomeDoUsuario;
+    private String nome;
 
     private boolean estadoCivil;
 
-    private String dataDenascimento;
+    private String dataDeNascimento;
 
     public Long getId() {
         return id;
@@ -27,11 +27,27 @@ public class Usuario implements Serializable {
         this.id = id;
     }
 
-    public String getNomeDoUsuario() {
-        return nomeDoUsuario;
+    public String getNome() {
+        return nome;
     }
 
-    public void setNomeDoUsuario(String nomeDoUsuario) {
-        this.nomeDoUsuario = nomeDoUsuario;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public boolean isEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(boolean estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+
+    public String getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(String dataDeNascimento) {
+        this.dataDeNascimento = dataDeNascimento;
     }
 }

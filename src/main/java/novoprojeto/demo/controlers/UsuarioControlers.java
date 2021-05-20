@@ -5,7 +5,9 @@ import novoprojeto.demo.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -32,5 +34,18 @@ public class UsuarioControlers {
         mv.addObject("usuarios" , usuarios);
 
         return mv;
+    }
+
+    @GetMapping("/add")
+    public String addUsuarioPage(Usuario usuario){
+        return "usuarios_add";
+    }
+    @PostMapping("/add")
+    public String addUsuario(@Validated Usuario usuario){
+        usuarioRepository.save(usuario);
+
+        return "reditect:/usuarios/";
+
+
     }
 }
