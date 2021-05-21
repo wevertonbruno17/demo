@@ -40,11 +40,13 @@ public class UsuarioControlers {
     public String addUsuarioPage(Usuario usuario){
         return "usuarios_add";
     }
+
+
     @PostMapping("/add")
     public String addUsuario(@Validated Usuario usuario){
         usuarioRepository.save(usuario);
 
-        return "reditect:/usuarios/";
+        return "redirect:/usuarios/";
 
 
     }

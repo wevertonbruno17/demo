@@ -11,9 +11,9 @@
 </head>
 <body>
 <div class="row">
-    <div class="col bg-primary">
+    <div class="col ">
     </div>
-    <div class="col bg-secundary">
+    <div class="col ">
         <table class="table">
             <thead>
             <tr>
@@ -29,10 +29,12 @@
                 <td th:text="${usuario.nome}"></td>
 
                 <td th:text="${usuario.estadoCivil}"></td>
-                <td th:text="${usuario.dataDenascimento}"></td>
+                <td th:text="${usuario.dataDeNascimento}"></td>
             </tr>
             </tbody>
         </table>
+            <a href="/usuarios/add" class="btn btn-warning" style="...">Adicionar Usuários</a>
+
 
     </div>
     <div class="col bg-secundary">
